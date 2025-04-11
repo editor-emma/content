@@ -374,7 +374,7 @@ img {
 }
 
 .story--has-story .story__border {
-  stroke: url(#--story-gradient);
+  
   stroke-width: 2;
 }
 
