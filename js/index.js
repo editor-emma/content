@@ -254,6 +254,16 @@ for (let i = 0; i < like_checkboxes.length; i++) {
   });
 }
 
+const searchFormDesktop = document.getElementById('searchFormDesktop');
+  if (searchFormDesktop) {
+    searchFormDesktop.addEventListener('submit', handleSearchFormSubmit);
+  }
+
+  const searchFormMobile = document.getElementById('searchFormMobile');
+  if (searchFormMobile) {
+    searchFormMobile.addEventListener('submit', handleSearchFormSubmit);
+  }
+
 function IsImageOk(img) {
 
   // During the onload event, IE correctly identifies any images that
@@ -391,4 +401,19 @@ function showComments(element) {
     commentsElement.style.display = 'none';
   }
 
+}
+
+function handleSearchFormSubmit(event) {
+  event.preventDefault(); // Prevent default form submission
+  const form = event.target;
+  const searchInput = form.querySelector('input[name="tagName"]');
+  const tagName = searchInput.value.trim();
+  if (tagName) {
+    const encodedTagName = encodeURIComponent(tagName);
+    // Assuming the target page number is always 1 for a new search
+    window.location.href = `/tag/${encodedTagName}/page/1`;
+  } else {
+     // If search is empty, redirect to home or handle as needed
+     window.location.href = '/';
+  }
 }
