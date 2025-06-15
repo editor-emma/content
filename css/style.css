@@ -1,6 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300;400;500;600;700&display=swap'); */
 
 /* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+/* CSS Reset */
 *,
 *::after,
 *::before {
@@ -9,12 +12,17 @@
   padding: 0;
 }
 
-*,
+/* Apply font to all elements */
+* {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', 'Roboto', sans-serif;
+}
+
+/* Keep the specific form elements styling */
 button,
 input,
 select,
 textarea {
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit; /* This will inherit the font from the parent */
 }
 
 /* Vars */
