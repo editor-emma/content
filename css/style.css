@@ -528,6 +528,10 @@ img {
   color: var(--text-dark);
 }
 
+.post__profile h3{
+  color: var(--text-dark);
+}
+
 .post__avatar {
   width: 35px;
   height: 35px;
@@ -535,6 +539,7 @@ img {
   overflow: hidden;
   position: relative;
 }
+
 
 .post__avatar::after {
   content: '';
